@@ -90,9 +90,11 @@ public class RobotContainer {
 
         joystick.PS().whileTrue(m_Elevator.run(null));
 
+        joystick.options().whileTrue(m_Shooter.run(null));
+
     }
 
-    
+
     public Command getAutonomousCommand() {
         return Commands.print("No autonomous command configured");
     }
