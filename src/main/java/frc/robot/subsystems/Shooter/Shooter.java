@@ -13,7 +13,7 @@ public class Shooter  extends SubsystemBase {
 
    public Command runShooter() {
     return Commands.run(
-        () -> ShooterMotor.setVoltage(SmartDashboard.getNumber("Shoot Voltage", 12)),
+        () -> ShooterMotor.setVoltage(SmartDashboard.getNumber("Shoot Voltage", 4)),
 
         this
     );
@@ -21,7 +21,7 @@ public class Shooter  extends SubsystemBase {
 
   public Command runShooterPath() {
     return Commands.run(
-        () -> ShooterMotor.setVoltage(SmartDashboard.getNumber("Shoot Voltage", 12)),
+        () -> ShooterMotor.setVoltage(SmartDashboard.getNumber("Shoot Voltage", 4)),
 
         this
     );
