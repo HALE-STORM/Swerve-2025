@@ -6,6 +6,8 @@ package frc.robot;
 
 import static edu.wpi.first.units.Units.*;
 
+import javax.naming.Name;
+
 import com.ctre.phoenix6.swerve.SwerveModule.DriveRequestType;
 import com.ctre.phoenix6.swerve.SwerveRequest;
 import com.pathplanner.lib.auto.NamedCommands;
@@ -32,6 +34,7 @@ public class RobotContainer {
 
     public final Elevator m_Elevator = new Elevator();
     public final Shooter m_Shooter = new Shooter();
+
     
 
 
@@ -92,15 +95,14 @@ public class RobotContainer {
 
         drivetrain.registerTelemetry(logger::telemeterize);
 
-        joystick.create().whileTrue(m_Elevator.run(null));
+        //joystick.create().whileTrue(m_Elevator.(null));
 
-        joystick.options().whileTrue(m_Shooter.run(null));
+        joystick.options().whileTrue(m_Shooter.runShooter());
 
     }
 
-
     
-  // ...
+    
 
   public Command getAutonomousCommand() {
     // This method loads the auto when it is called, however, it is recommended

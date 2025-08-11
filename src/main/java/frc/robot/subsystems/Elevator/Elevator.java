@@ -9,6 +9,10 @@ import com.ctre.phoenix6.configs.Slot0Configs;
 public class Elevator  extends SubsystemBase {
     final TalonFX m_talonFX = new TalonFX(4);
 
+
+
+
+    
     public Elevator() {
         // in init function, set slot 0 gains
         var slot0Configs = new Slot0Configs();
