@@ -99,6 +99,8 @@ public class RobotContainer {
         //joystick.create().whileTrue(m_Elevator.(null));
 
         joystick.R1().whileTrue(m_Shooter.runShooter());
+        joystick.L1().whileTrue(m_Shooter.runEjectShooter());
+        
 
 
     }

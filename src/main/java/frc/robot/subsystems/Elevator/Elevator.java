@@ -12,7 +12,7 @@ public class Elevator  extends SubsystemBase {
 
 
 
-    
+
     public Elevator() {
         // in init function, set slot 0 gains
         var slot0Configs = new Slot0Configs();
@@ -30,4 +30,10 @@ public class Elevator  extends SubsystemBase {
         // set position to 10 rotations
         return run(() -> m_talonFX.setControl(m_request.withPosition(heightRotations)));
     }
+
+
+
+
+
+    
 }
