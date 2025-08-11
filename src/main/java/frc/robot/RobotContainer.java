@@ -49,6 +49,7 @@ public class RobotContainer {
     private final Telemetry logger = new Telemetry(MaxSpeed);
 
     private final CommandPS5Controller joystick = new CommandPS5Controller(0);
+    //private final CommandPS5Controller driveCommandPS5Controller = new CommandPS5Controller(1);
 
     public final CommandSwerveDrivetrain drivetrain = TunerConstants.createDrivetrain();
 
@@ -97,7 +98,8 @@ public class RobotContainer {
 
         //joystick.create().whileTrue(m_Elevator.(null));
 
-        joystick.options().whileTrue(m_Shooter.runShooter());
+        joystick.R1().whileTrue(m_Shooter.runShooter());
+
 
     }
 

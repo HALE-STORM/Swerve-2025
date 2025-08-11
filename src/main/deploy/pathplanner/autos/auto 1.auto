@@ -37,6 +37,12 @@
                 "data": {
                   "name": "Shoot"
                 }
+              },
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "coral auto 1.2"
+                }
               }
             ]
           }
