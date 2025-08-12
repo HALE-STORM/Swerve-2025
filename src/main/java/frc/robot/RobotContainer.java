@@ -48,6 +48,7 @@ public class RobotContainer {
 
     private final Telemetry logger = new Telemetry(MaxSpeed);
 
+    private final CommandPS5Controller operator = new CommandPS5Controller(1);
     private final CommandPS5Controller joystick = new CommandPS5Controller(0);
     //private final CommandPS5Controller driveCommandPS5Controller = new CommandPS5Controller(1);
 
@@ -86,10 +87,10 @@ public class RobotContainer {
 
         // Run SysId routines when holding back/start and X/Y.
         // Note that each routine should be run exactly once in a single log.
-        joystick.povUp().and(joystick.triangle()).whileTrue(drivetrain.sysIdDynamic(Direction.kForward));
-        joystick.povUp().and(joystick.square()).whileTrue(drivetrain.sysIdDynamic(Direction.kReverse));
-        joystick.povDown().and(joystick.triangle()).whileTrue(drivetrain.sysIdQuasistatic(Direction.kReverse));
-        joystick.povDown().and(joystick.square()).whileTrue(drivetrain.sysIdQuasistatic(Direction.kForward));
+      //  joystick.povUp().and(joystick.triangle()).whileTrue(drivetrain.sysIdDynamic(Direction.kForward));
+       // joystick.povUp().and(joystick.square()).whileTrue(drivetrain.sysIdDynamic(Direction.kReverse));
+       // joystick.povDown().and(joystick.triangle()).whileTrue(drivetrain.sysIdQuasistatic(Direction.kReverse));
+        //joystick.povDown().and(joystick.square()).whileTrue(drivetrain.sysIdQuasistatic(Direction.kForward));
 
         // reset the field-centric heading on left bumper press
         joystick.PS().onTrue(drivetrain.runOnce(() -> drivetrain.seedFieldCentric()));
@@ -100,6 +101,9 @@ public class RobotContainer {
 
         joystick.R1().whileTrue(m_Shooter.runShooter());
         joystick.L1().whileTrue(m_Shooter.runEjectShooter());
+        
+
+        
         
 
 
