@@ -47,10 +47,12 @@ public class RobotContainer {
     private final SwerveRequest.PointWheelsAt point = new SwerveRequest.PointWheelsAt();
 
     private final Telemetry logger = new Telemetry(MaxSpeed);
-
-    private final CommandPS5Controller joystick = new CommandPS5Controller(1);
-    private final CommandPS5Controller operator = new CommandPS5Controller(0);
+//joystick is driver, and operator is co driver.
+    private final CommandPS5Controller joystick = new CommandPS5Controller(0);
+    private final CommandPS5Controller operator = new CommandPS5Controller(1);
     public final CommandSwerveDrivetrain drivetrain = TunerConstants.createDrivetrain();
+
+
 
     public RobotContainer() {
         NamedCommands.registerCommand("Shoot", m_Shooter.runShooter());
