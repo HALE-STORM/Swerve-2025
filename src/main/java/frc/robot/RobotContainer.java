@@ -50,8 +50,6 @@ public class RobotContainer {
 
     private final CommandPS5Controller operator = new CommandPS5Controller(1);
     private final CommandPS5Controller joystick = new CommandPS5Controller(0);
-    //private final CommandPS5Controller driveCommandPS5Controller = new CommandPS5Controller(1);
-
     public final CommandSwerveDrivetrain drivetrain = TunerConstants.createDrivetrain();
 
     public RobotContainer() {
@@ -101,11 +99,10 @@ public class RobotContainer {
         joystick.R1().whileTrue(m_Shooter.runShooter());
         joystick.L1().whileTrue(m_Shooter.runEjectShooter());
 
-        
 
-        
-        
 
+        m_Shooter.setDefaultCommand(m_Shooter.stopShooter()); 
+        
 
     }
 
