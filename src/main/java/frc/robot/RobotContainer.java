@@ -102,7 +102,8 @@ public class RobotContainer {
 
        // joystick.create().whileTrue(m_Elevator.slot0Configs());
         operator.R1().whileTrue(m_Shooter.runShooter());
-        operator.L1().whileTrue(m_Shooter.runEjectShooter());
+        operator.povLeft().whileTrue(m_Shooter.runEjectShooter());
+        operator.L1().whileTrue(m_Shooter.runAlgae());
         
 
 
