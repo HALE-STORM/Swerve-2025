@@ -48,16 +48,19 @@ public class RobotContainer {
 
     private final Telemetry logger = new Telemetry(MaxSpeed);
 
-    private final CommandPS5Controller operator = new CommandPS5Controller(1);
-    private final CommandPS5Controller joystick = new CommandPS5Controller(0);
+    private final CommandPS5Controller joystick = new CommandPS5Controller(1);
+    private final CommandPS5Controller operator = new CommandPS5Controller(0);
     public final CommandSwerveDrivetrain drivetrain = TunerConstants.createDrivetrain();
 
     public RobotContainer() {
         NamedCommands.registerCommand("Shoot", m_Shooter.runShooter());
+        NamedCommands.registerCommand("eject shooter", m_Shooter.runEjectShooter());
         //NamedCommands.registerCommand("Smart Intake", m_Elevator.());
         configureBindings();
 
     }
+
+
 
     private void configureBindings() {
         // Note that X is defined as forward according to WPILib convention,
@@ -96,8 +99,9 @@ public class RobotContainer {
         drivetrain.registerTelemetry(logger::telemeterize);
 
        // joystick.create().whileTrue(m_Elevator.slot0Configs());
-        joystick.R1().whileTrue(m_Shooter.runShooter());
-        joystick.L1().whileTrue(m_Shooter.runEjectShooter());
+        operator.R1().whileTrue(m_Shooter.runShooter());
+        operator.L1().whileTrue(m_Shooter.runEjectShooter());
+        
 
 
 
