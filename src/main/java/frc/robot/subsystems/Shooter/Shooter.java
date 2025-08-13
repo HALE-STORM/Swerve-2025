@@ -4,7 +4,6 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import java.util.function.BooleanSupplier;
 
 import com.ctre.phoenix6.hardware.TalonFX;
@@ -14,11 +13,7 @@ public class Shooter  extends SubsystemBase {
     private final TalonFX ShooterMotor = new TalonFX(10);
     public final DigitalInput beamBreak = new DigitalInput(0);
 
-private void setVoltage(double voltage){
-  SmartDashboard.putBoolean("beam break", beamBreak.get());
-  SmartDashboard.putBoolean("beam broken", beamBroken.getAsBoolean());
-  
-}
+
 
    
     public Command runShooter() {
