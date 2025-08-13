@@ -44,7 +44,7 @@ public Shooter(){
 
     public Command runAlgae(){
       return Commands.run(
-        () -> ShooterMotor.setVoltage(6), this
+        () -> ShooterMotor.setVoltage(-6), this
         );
 
     } 
