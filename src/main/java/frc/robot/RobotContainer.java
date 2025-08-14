@@ -57,7 +57,7 @@ public class RobotContainer {
     public RobotContainer() {
         NamedCommands.registerCommand("Shoot", m_Shooter.runShooter());
         NamedCommands.registerCommand("eject shooter", m_Shooter.runEjectShooter());
-        //NamedCommands.registerCommand("Smart Intake", m_Elevator.());
+        //NamedCommands.registerCommand("Elevator level 1", m_Elevator.());
         configureBindings();
 
     }
@@ -104,6 +104,7 @@ public class RobotContainer {
         operator.R1().whileTrue(m_Shooter.runShooter());
         operator.povLeft().whileTrue(m_Shooter.runEjectShooter());
         operator.L1().whileTrue(m_Shooter.runAlgae());
+
         
 
 
