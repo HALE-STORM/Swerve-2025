@@ -101,7 +101,7 @@ public class RobotContainer {
         drivetrain.registerTelemetry(logger::telemeterize);
 
        // joystick.create().whileTrue(m_Elevator.slot0Configs());
-        joystick.R1().whileTrue(m_Shooter.runShooter());
+        joystick.R1().whileTrue(m_Shooter.runAlgae());
         joystick.povLeft().whileTrue(m_Shooter.runEjectShooter());
 
 
