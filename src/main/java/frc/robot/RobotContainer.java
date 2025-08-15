@@ -14,6 +14,7 @@ import com.pathplanner.lib.auto.NamedCommands;
 import com.pathplanner.lib.commands.PathPlannerAuto;
 
 import edu.wpi.first.math.geometry.Rotation2d;
+import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.PS5Controller;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -104,7 +105,7 @@ public class RobotContainer {
         operator.R1().whileTrue(m_Shooter.runShooter());
         operator.povLeft().whileTrue(m_Shooter.runEjectShooter());
         operator.L1().whileTrue(m_Shooter.runAlgae());
-
+        
         
 
 

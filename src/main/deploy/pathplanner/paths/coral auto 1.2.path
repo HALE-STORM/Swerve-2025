@@ -3,29 +3,29 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 3.9288068181818185,
-        "y": 2.424559659090909
+        "x": 3.867927631578947,
+        "y": 2.4759046052631586
       },
       "prevControl": null,
       "nextControl": {
-        "x": 3.6668226668880863,
-        "y": 2.233137827523219
+        "x": 3.6059434802852146,
+        "y": 2.2844827736954687
       },
       "isLocked": false,
-      "linkedName": null
+      "linkedName": "CDFlush"
     },
     {
       "anchor": {
-        "x": 1.555568181818182,
-        "y": 0.9387926136363626
+        "x": 1.3760795454545454,
+        "y": 0.8590198863636362
       },
       "prevControl": {
-        "x": 2.5297725086583682,
-        "y": 1.5490023945513827
+        "x": 2.3502838722947326,
+        "y": 1.4692296672786562
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": null
+      "linkedName": "BottomCORALPickup"
     }
   ],
   "rotationTargets": [],
@@ -45,10 +45,10 @@
     "rotation": 53.97262661489631
   },
   "reversed": false,
-  "folder": "coral auto 1",
+  "folder": "coral auto right 1",
   "idealStartingState": {
     "velocity": 0,
-    "rotation": 62.10272896905228
+    "rotation": 60.5725435968102
   },
   "useDefaultConstraints": true
 }
