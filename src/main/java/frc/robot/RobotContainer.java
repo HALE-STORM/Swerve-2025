@@ -50,7 +50,7 @@ public class RobotContainer {
     private final Telemetry logger = new Telemetry(MaxSpeed);
 //joystick is driver, and operator is co driver.
     private final CommandPS5Controller joystick = new CommandPS5Controller(0);
-    private final CommandPS5Controller operator = new CommandPS5Controller(1);
+    //private final CommandPS5Controller operator = new CommandPS5Controller(1);
     public final CommandSwerveDrivetrain drivetrain = TunerConstants.createDrivetrain();
 
 
@@ -102,11 +102,8 @@ public class RobotContainer {
         drivetrain.registerTelemetry(logger::telemeterize);
 
        // joystick.create().whileTrue(m_Elevator.slot0Configs());
-        operator.R1().whileTrue(m_Shooter.runShooter());
-        operator.povLeft().whileTrue(m_Shooter.runEjectShooter());
-        operator.L1().whileTrue(m_Shooter.runAlgae());
-        
-        
+        joystick.R1().whileTrue(m_Shooter.runShooter());
+        joystick.povLeft().whileTrue(m_Shooter.runEjectShooter());
 
 
 
